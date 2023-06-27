@@ -1,0 +1,36 @@
+@import "../variables";
+
+.timerContainer {
+    position: absolute;
+    top: 200px;
+}
+
+.btnContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 50px;
+}
+
+.stopwatch {
+    
+}
+
+.timerBtn {
+    width: 50px;
+    height: 50px;
+    background: $bgColor;
+    border: $border;
+    border-radius: 30px;
+    font-size: 20px;
+    color: $textColor;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+.timerBtn:hover {
+    border-color: $primaryColor;
+}
+
+.timerBtn:active {
+    scale: .9;
+}

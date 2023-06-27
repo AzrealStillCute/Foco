@@ -1,0 +1,25 @@
+@import "../variables";
+
+#footer {
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.shortcutsContainer {
+    display: grid;
+}
+
+.shortcuts {
+    font-family: $secondaryFont;
+    font-size: 12px;
+    color: #808080;
+    margin-bottom: 8px;
+}
+
+.keys {
+    padding: 0 8px 2px;
+    border-radius: 2px;
+    border: 1px solid #313131;
+}

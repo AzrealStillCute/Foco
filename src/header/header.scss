@@ -1,0 +1,51 @@
+@import "../variables";
+
+#header {
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    font-family: $primaryFont;
+    font-size: 25px;
+    color: $textColor;
+}
+
+.indicator {
+    width: 400px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: auto 1px auto;
+    background: $bgColor;
+    border: $border;
+    border-radius: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.divider {
+    height: 20px;
+    width: 1px;
+    background-color: $secColor;
+}
+
+.state {
+    font-family: $primaryFont;
+    color: $textColor;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+
+.active {
+    color: $primaryColor;
+}
+
+.optionIcon {
+    display: grid;
+    grid-column: 1;
+    width: 80px;
+    justify-content: end;
+}
+
