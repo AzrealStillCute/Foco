@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 #mainContainer {
@@ -30,4 +31,26 @@ video {
   padding: 25px;
   width: 100%;
   height: 100%;
+}
+
+.popupContainer {
+  backdrop-filter: blur(5px);
+  width: inherit;
+  height: inherit;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes animate {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to { 
+      opacity: 1;
+      transform: translateY(0);
+  }
 }

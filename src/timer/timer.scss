@@ -1,18 +1,62 @@
 @import "../variables";
 
-.timerContainer {
-    position: absolute;
-    top: 200px;
-}
-
-.btnContainer {
+.stopwatchContainer {
+    position: relative;
     display: grid;
-    grid-template-columns: auto auto auto;
-    column-gap: 50px;
+    row-gap: 60px;
 }
 
 .stopwatch {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgColor;
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+}
+
+.timeContainer {
+    margin-top: 50px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.minute {
+    font-family: $primaryFont;
+    color: $textColor;
+    font-size: 90px;
+    scale: .85;
+    color: $secColor;
+    transition: all .4s ease-out;
+}
+
+.minuteActive {
+    scale: 1;
+    color: $textColor;
+}
+
+.second {
+    font-family: $primaryFont;
+    color: $secColor;
+    font-size: 25px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all .4s ease-out;
+}
+
+.appear {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
 }
 
 .timerBtn {
@@ -24,7 +68,7 @@
     font-size: 20px;
     color: $textColor;
     cursor: pointer;
-    transition: all .2s ease-out;
+    transition: all .1s ease-out;
 }
 
 .timerBtn:hover {

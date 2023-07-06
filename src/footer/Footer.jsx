@@ -3,36 +3,8 @@ import "./footer.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExpand } from '@fortawesome/free-solid-svg-icons'
 
-let isKeyPressed = {
-    "Control": false,
-    "f": false,
-}
+const Footer = ({getFullScreen}) => {
 
-document.onkeydown = (e) => {
-
-    e.preventDefault()
-    
-    isKeyPressed[e.key] = true
-
-    if (isKeyPressed["Control"] && isKeyPressed["f"]) getFullScreen()
-}
-
-document.onkeyup = (e) => {
-
-    e.preventDefault()
-
-    isKeyPressed[e.key] = false
-}
-
-const getFullScreen = () => {
-    if (document.fullscreenElement) {
-        document.exitFullscreen()
-      } else {
-        document.documentElement.requestFullscreen();
-      }
-}
-
-const Footer = () => {
   return (
     <div id='footer'>
         <div className='shortcutsContainer'>
