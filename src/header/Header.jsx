@@ -1,9 +1,10 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import "./header.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGear, faVolumeHigh, faVolumeMute } from '@fortawesome/free-solid-svg-icons'
+import forestSound from "../assets/audio/backgroundSound.mp3"
 
-const Header = ({current, setCurrent}) => {
+const Header = ({current, setCurrent, settingPopup, setSettingPopup}) => {
 
     const [ mute, setMute ] = useState(false)
 
@@ -20,7 +21,7 @@ const Header = ({current, setCurrent}) => {
             <div onClick={stateClick} id="break" className={`${ current === "break" ? "active" : ""} state`}>Break Time</div>
         </div>
         <div className="optionIcon">
-            <FontAwesomeIcon icon={faGear} className='icon'/>
+            <FontAwesomeIcon icon={faGear} onClick={() => {setSettingPopup(!settingPopup)}} className='icon'/>
             <FontAwesomeIcon onClick={() => setMute(!mute)} icon={ mute ? faVolumeMute : faVolumeHigh } className='icon'/>
         </div>
     </div>

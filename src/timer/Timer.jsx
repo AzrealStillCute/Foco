@@ -5,11 +5,13 @@ import { faPause, faPlay, faStop, faStopwatch } from '@fortawesome/free-solid-sv
 import border from "../assets/timerBorder.svg"
 import CircularProgress from '../components/CircularProgress'
 import clickSound from "../assets/audio/typewriter.mp3"
+import alarm from "../assets/audio/alarm.mp3"
 
 
 const Timer = ({current, setCurrent, popup, setPopup, minute, dipatchMinute, initialMinute, getFullScreen}) => {
 
   const btnSound = new Audio(clickSound)
+  const alarmSound = new Audio(alarm)
   const [ pause, setPause ] = useState(true)
   const [ active, setActive ] = useState(false)
   const [ second, setSecond] = useState(60)
@@ -25,6 +27,9 @@ const Timer = ({current, setCurrent, popup, setPopup, minute, dipatchMinute, ini
         if (second === 1) {
           dipatchMinute(current)
           setSecond(60)
+        }
+        if ( minute[current] === 1 && second === 1) {
+          alarmSound.play()
         }
         if ( minute[current] === 0) {
           setCurrent(current === "study" ? "break" : "study")
@@ -43,9 +48,9 @@ const Timer = ({current, setCurrent, popup, setPopup, minute, dipatchMinute, ini
     "Enter": false,
     "f": false,
     "r": false
-}
+  }
 
-document.onkeydown = (e) => {
+  document.onkeydown = (e) => {
 
     e.preventDefault()
     
@@ -55,13 +60,12 @@ document.onkeydown = (e) => {
     if (isKeyPressed["Control"] && isKeyPressed["Enter"]) setCurrent(current === "study" ? "break" : "study")
     if (e.key === " ") playPauseHandle()
     if (isKeyPressed["Control"] && isKeyPressed["r"]) stopHandle()
-}
+  }
 
-document.onkeyup = (e) => {
-
+  document.onkeyup = (e) => {
     e.preventDefault()
     isKeyPressed[e.key] = false
-}
+  }
 
   useEffect(()=> {
     setSecond(60)
@@ -80,6 +84,7 @@ document.onkeyup = (e) => {
     setPause(true)
     dipatchMinute("reset")
     setActive(false)
+    setSecond(60)
   }
 
   useEffect(()=> {
@@ -93,7 +98,7 @@ document.onkeyup = (e) => {
   return (
     <div className='stopwatchContainer'>
         <div className='stopwatch'>
-          <CircularProgress percentage={ 100 - (minute[current] * 100 / initialMinute[current]) } />
+          <CircularProgress percentage={((minute[current] - 1) * 60 + second) * 100 / (initialMinute[current] * 60)} />
           <img src={border} className='timerBorder'/>
           <div className='timeContainer'>
             <span className={`${active ? "minuteActive" : ""} minute`}>{minute[current]}</span>
