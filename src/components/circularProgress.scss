@@ -1,0 +1,25 @@
+@import "../variables";
+
+.ring {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+
+.track, .progress {
+    r: 135;
+    cx: 150;
+    cy: 150;
+    fill: transparent;
+    stroke-width: 10px;
+}
+
+.progress {
+    stroke: $primaryColor;
+    stroke-dasharray: 848;
+    stroke-linecap: round;
+    transition: all .4s ease-out;
+
+    transform: rotate(-90deg);
+    transform-origin: center;
+}

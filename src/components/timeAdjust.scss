@@ -1,0 +1,111 @@
+@import "../variables";
+
+.timeAdjustInnerContainer {
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    row-gap: 50px;
+    border-radius: 10px;
+    padding: 50px;
+    border: $border;
+    animation: animate .3s ease-out;
+}
+
+.settingName {
+    display: block;
+    color: $textColor;
+    font-family: $secondaryFont;
+    margin-bottom: 20px;
+}
+
+.timeRange[type="range"] {
+    -webkit-appearance: none;
+    position: relative;
+    height: 3px;
+    border-radius: 2px;
+    width: 300px;
+    background: #fff;
+    outline: none;
+    border: none;
+    z-index: 2;
+}
+
+.timeRange[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    background: $primaryColor;
+    cursor: pointer;
+    transition: all .1s ease-out;
+}
+
+.timeRange[type="range"]::-webkit-slider-thumb:active {
+    outline: 5px solid rgba(195, 255, 0, 0.20);
+}
+
+.timeRange[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    background: $primaryColor;
+    border: none;
+    cursor: pointer;
+    transition: all .1s ease-out;   
+}
+
+.timeRange[type="range"]::-moz-range-thumb:active {
+    outline: 5px solid rgba(195, 255, 0, 0.20);
+}
+
+.timeRange[type="range"]::-moz-range-progress {
+    background: $primaryColor;
+}
+
+.sliderLabel {
+    color: $textColor;
+    font-family: $secondaryFont;
+    margin-left: 20px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.timeOption {
+    margin-top: 10px;
+    color: $secColor;
+    font-family: $secondaryFont;
+    font-size: 14px;
+    width: 303px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.timeOption span:first-of-type {
+    width: 16.8px;
+    text-align: center;
+}
+
+.activeValue {
+    color: $textColor
+}
+
+.pointContainer {
+    position: absolute;
+    display: flex;
+    margin-left: 2px;
+    z-index: 1;
+    width: 300px;
+    justify-content: space-between;
+    top: 8.5px;
+}
+
+.point{
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: space-between;
+}
