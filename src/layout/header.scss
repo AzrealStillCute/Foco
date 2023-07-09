@@ -12,6 +12,10 @@
     color: $textColor;
 }
 
+#mobileIndicator {
+    display: none;
+}
+
 .indicator {
     width: 400px;
     height: 50px;
@@ -49,3 +53,22 @@
     justify-content: end;
 }
 
+@media only screen and ( max-width: 680px ) {
+    #header {
+        align-items: center;
+    }
+
+    #desktopVolumeIcon, #desktopIndicator {
+        display: none;
+    }
+
+    #mobileIndicator {
+        margin-block: 20px 60px;
+        display: grid;
+        width: 100%;
+    }
+
+    .state {
+        font-size: 16px;
+    }
+}

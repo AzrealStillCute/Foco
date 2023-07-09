@@ -1,16 +1,19 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import "./circularProgress.scss"
 
 function CircularProgress({percentage}) {
 
+  const progerssRef = useRef(null)
+
     useEffect(()=> {
-        document.querySelector(".progress").style.strokeDashoffset = 848 / 100 * percentage
+        const value = window.getComputedStyle(progerssRef.current).strokeDasharray
+        progerssRef.current.style.strokeDashoffset = value.slice(0, -2) / 100 * percentage
     }, [percentage])
 
   return (
     <svg className='ring'>
         <circle className='track'/>
-        <circle className='progress'/>
+        <circle ref={progerssRef} className='progress'/>
     </svg>
   )
 }

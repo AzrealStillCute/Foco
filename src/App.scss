@@ -36,14 +36,14 @@ video {
 }
 
 .popupContainer {
+  position: fixed;
   width: inherit;
   height: inherit;
-  position: fixed;
-  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 @keyframes animate {
   from {
@@ -79,5 +79,30 @@ video {
   border: none;
   outline: none;
   cursor: pointer;
+  margin-right: 10px;
+}
+
+.icon {
+  box-sizing: border-box;
+  padding: 15px;
+  width: 20px;
+  font-size: 20px;
+  color: $textColor;
+  cursor: pointer;
+  transition-timing-function: ease-out;
+}
+
+.icon:active {
+  scale: .9;
+}
+
+@media only screen and ( max-width: 680px ) {
+  #contentContainer {
+    justify-content: start;
+  }
+  
+  .icon {
+    padding: 0;
+  }
 }
 

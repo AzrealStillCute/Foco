@@ -77,4 +77,33 @@
 
 .timerBtn:active {
     scale: .9;
+    border-color: $primaryColor;
+}
+
+@media only screen and ( max-width: 680px ) {
+    .stopwatch {
+        width: 285px;
+        height: 285px;
+    }
+
+    .timerBorder {
+        width: 260px;
+    }
+
+    .timeContainer {
+        margin-top: 45px;
+    }
+    
+    .minute {
+        font-size: 80px;
+    }
+
+    .second {
+        font-size: 22px;
+    }
+
+    .timerBtn:hover {
+        border-color: $secColor;
+    }
+    
 }

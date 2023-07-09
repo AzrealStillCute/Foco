@@ -23,3 +23,14 @@
     transform: rotate(-90deg);
     transform-origin: center;
 }
+
+@media only screen and ( max-width: 680px ) {
+
+    .track, .progress {
+        r: 128;
+    }
+
+    .progress {
+        stroke-dasharray: 826;
+    }
+}

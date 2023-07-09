@@ -86,6 +86,38 @@
     cursor: pointer;
 }
 
+.mobileSettingContainer {
+    margin-top: 40px;
+    align-self: flex-start;
+    display: none;
+    width: 100%;
+    margin-inline: 20px;
+    font-family: $secondaryFont;
+    background: #000;
+    border: $border;
+    border-radius: 10px;
+    padding: 30px;
+    animation: animate .3s ease-out;
+}
+
 .activeSetting {
     color: $primaryColor;
+}
+
+.mobileBtnContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and ( max-width: 680px ) {
+    .settingContainer {
+        display: none;
+    }
+
+    .mobileSettingContainer {
+        display: block;
+    }
+
 }

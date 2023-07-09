@@ -109,3 +109,41 @@
     display: flex;
     justify-content: space-between;
 }
+
+@media only screen and ( max-width: 680px ) {
+
+    .timeAdjustInnerContainer {
+        padding: 30px;
+    }
+
+    .timeRange[type="range"]{
+        width: 210px;
+        height: 2px;
+    }
+
+    .pointContainer {
+        top: 11px;
+        width: 212px;
+    }
+
+    .point {
+        width: 5px;
+        height: 5px;
+    }
+
+    .timeOption {
+        margin-top: 10px;
+        color: $secColor;
+        font-family: $secondaryFont;
+        font-size: 14px;
+        width: 220px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .timeRange[type="range"]::-webkit-slider-thumb {
+        width: 10px;
+        height: 10px;
+        border: 5px;
+    }
+}

@@ -23,3 +23,9 @@
     border-radius: 2px;
     border: 1px solid #313131;
 }
+
+@media only screen and ( max-width: 680px ) {
+    #footer {
+        display: none;
+    }
+}
