@@ -1,74 +1,75 @@
 @import "../variables";
 
 #header {
-    width: inherit;
-    display: flex;
-    justify-content: space-between;
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
 }
 
 #logo {
-    font-family: $primaryFont;
-    font-size: 25px;
-    color: $textColor;
+  font-family: $primaryFont;
+  font-size: 25px;
+  color: $textColor;
 }
 
 #mobileIndicator {
-    display: none;
+  display: none;
 }
 
 .indicator {
-    width: 400px;
-    height: 50px;
-    display: grid;
-    grid-template-columns: auto 1px auto;
-    background: $bgColor;
-    border: $border;
-    border-radius: 10px;
-    justify-items: center;
-    align-items: center;
+  width: 400px;
+  height: 50px;
+  display: grid;
+  grid-template-columns: auto 1px auto;
+  background: $bgColor;
+  border: $border;
+  border-radius: 10px;
+  justify-items: center;
+  align-items: center;
 }
 
 .divider {
-    height: 20px;
-    width: 1px;
-    background-color: $secColor;
+  height: 20px;
+  width: 1px;
+  background-color: $secColor;
 }
 
 .state {
-    font-family: $primaryFont;
-    color: $textColor;
-    font-size: 18px;
-    cursor: pointer;
-    transition: all .5s ease-out;
+  font-family: $primaryFont;
+  color: $textColor;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
 }
 
 .active {
-    color: $primaryColor;
+  color: $primaryColor;
 }
 
 .optionIcon {
-    display: grid;
-    grid-column: 1;
-    width: 80px;
-    justify-content: end;
+  display: grid;
+  grid-column: 1;
+  width: 80px;
+  justify-content: end;
 }
 
-@media only screen and ( max-width: 680px ) {
-    #header {
-        align-items: center;
-    }
+@media only screen and (max-width: 680px) {
+  #header {
+    align-items: center;
+  }
 
-    #desktopVolumeIcon, #desktopIndicator {
-        display: none;
-    }
+  #desktopVolumeIcon,
+  #desktopIndicator {
+    display: none;
+  }
 
-    #mobileIndicator {
-        margin-block: 20px 60px;
-        display: grid;
-        width: 100%;
-    }
+  #mobileIndicator {
+    margin-block: 20px 60px;
+    display: grid;
+    width: 100%;
+  }
 
-    .state {
-        font-size: 16px;
-    }
+  .state {
+    font-size: 16px;
+  }
 }

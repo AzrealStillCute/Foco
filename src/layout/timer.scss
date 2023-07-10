@@ -1,109 +1,108 @@
 @import "../variables";
 
 .stopwatchContainer {
-    position: relative;
-    display: grid;
-    row-gap: 60px;
+  position: relative;
+  display: grid;
+  row-gap: 60px;
 }
 
 .stopwatch {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $bgColor;
-    box-sizing: border-box;
-    width: 300px;
-    height: 300px;
-    border-radius: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bgColor;
+  box-sizing: border-box;
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
 }
 
 .timeContainer {
-    margin-top: 50px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-top: 50px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .minute {
-    font-family: $primaryFont;
-    color: $textColor;
-    font-size: 90px;
-    scale: .85;
-    color: $secColor;
-    transition: all .4s ease-out;
+  font-family: $primaryFont;
+  color: $textColor;
+  font-size: 90px;
+  scale: 0.85;
+  color: $secColor;
+  transition: all 0.4s ease-out;
 }
 
 .minuteActive {
-    scale: 1;
-    color: $textColor;
+  scale: 1;
+  color: $textColor;
 }
 
 .second {
-    font-family: $primaryFont;
-    color: $secColor;
-    font-size: 25px;
-    transform: translateY(10px);
-    opacity: 0;
-    transition: all .4s ease-out;
+  font-family: $primaryFont;
+  color: $secColor;
+  font-size: 25px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 0.4s ease-out;
 }
 
 .appear {
-    transform: translateY(0);
-    opacity: 1;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .btnContainer {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 50px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 50px;
 }
 
 .timerBtn {
-    width: 50px;
-    height: 50px;
-    background: $bgColor;
-    border: $border;
-    border-radius: 30px;
-    font-size: 20px;
-    color: $textColor;
-    cursor: pointer;
-    transition: all .1s ease-out;
+  width: 50px;
+  height: 50px;
+  background: $bgColor;
+  border: $border;
+  border-radius: 30px;
+  font-size: 20px;
+  color: $textColor;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
 }
 
 .timerBtn:hover {
-    border-color: $primaryColor;
+  border-color: $primaryColor;
 }
 
 .timerBtn:active {
-    scale: .9;
-    border-color: $primaryColor;
+  scale: 0.9;
+  border-color: $primaryColor;
 }
 
-@media only screen and ( max-width: 680px ) {
-    .stopwatch {
-        width: 285px;
-        height: 285px;
-    }
+@media only screen and (max-width: 680px) {
+  .stopwatch {
+    width: 285px;
+    height: 285px;
+  }
 
-    .timerBorder {
-        width: 260px;
-    }
+  .timerBorder {
+    width: 260px;
+  }
 
-    .timeContainer {
-        margin-top: 45px;
-    }
-    
-    .minute {
-        font-size: 80px;
-    }
+  .timeContainer {
+    margin-top: 45px;
+  }
 
-    .second {
-        font-size: 22px;
-    }
+  .minute {
+    font-size: 80px;
+  }
 
-    .timerBtn:hover {
-        border-color: $secColor;
-    }
-    
+  .second {
+    font-size: 22px;
+  }
+
+  .timerBtn:hover {
+    border-color: $secColor;
+  }
 }

@@ -1,123 +1,123 @@
 @import "../variables";
 
 .settingContainer {
-    font-family: $secondaryFont;
-    display: grid;
-    grid-template-columns: 200px 300px;
-    grid-template-rows: 300px auto;
-    background: #000;
-    border: $border;
-    border-radius: 10px;
-    padding: 35px;
-    animation: animate .3s ease-out;
+  font-family: $secondaryFont;
+  display: grid;
+  grid-template-columns: 200px 300px;
+  grid-template-rows: 300px auto;
+  background: #000;
+  border: $border;
+  border-radius: 10px;
+  padding: 35px;
+  animation: animate 0.3s ease-out;
 }
 
 .settingTypes {
-    color: $textColor;
-    margin-bottom: 30px;
-    cursor: pointer;
+  color: $textColor;
+  margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .settingBtnContainer {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    grid-column: 1 / span 2;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  grid-column: 1 / span 2;
 }
 
 .settingName {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .settingOptions {
-    background: none;
-    color: #555555;
-    padding: 5px;
-    width: 200px;
-    font-size: 14px;
-    font-family: $secondaryFont;
-    border-color: $secColor;
-    border-radius: 5px;
-    cursor: pointer;
+  background: none;
+  color: #555555;
+  padding: 5px;
+  width: 200px;
+  font-size: 14px;
+  font-family: $secondaryFont;
+  border-color: $secColor;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .settingOptions:hover {
-    border-color: $textColor;
+  border-color: $textColor;
 }
 
-.appearanceSetting, .soundSetting {
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-    overflow-y: auto;
-    height: 100%;
+.appearanceSetting,
+.soundSetting {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  overflow-y: auto;
+  height: 100%;
 }
 
 .colorOptions {
-    margin-right: 10px;
-    width: 22px;
-    height: 22px;
-    border-radius: 12px;
-    font-size: 12px;
+  margin-right: 10px;
+  width: 22px;
+  height: 22px;
+  border-radius: 12px;
+  font-size: 12px;
 }
 
 .colorOptions:nth-child(1) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $primaryColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primaryColor;
 }
 
 .colorOptions:nth-child(2) {
-    background-color: #FF7700;
+  background-color: #ff7700;
 }
 
 .colorOptions:nth-child(3) {
-    background-color: #FFED00;
+  background-color: #ffed00;
 }
 
 .colorOptions:nth-child(4) {
-    background-color: #B6EADA;
+  background-color: #b6eada;
 }
 
 .colorOptions:hover {
-    outline: 1px solid $textColor;
-    outline-offset: 3px;
-    cursor: pointer;
+  outline: 1px solid $textColor;
+  outline-offset: 3px;
+  cursor: pointer;
 }
 
 .mobileSettingContainer {
-    margin-top: 40px;
-    align-self: flex-start;
-    display: none;
-    width: 100%;
-    margin-inline: 20px;
-    font-family: $secondaryFont;
-    background: #000;
-    border: $border;
-    border-radius: 10px;
-    padding: 30px;
-    animation: animate .3s ease-out;
+  margin-top: 40px;
+  align-self: flex-start;
+  display: none;
+  width: 100%;
+  margin-inline: 20px;
+  font-family: $secondaryFont;
+  background: #000;
+  border: $border;
+  border-radius: 10px;
+  padding: 30px;
+  animation: animate 0.3s ease-out;
 }
 
 .activeSetting {
-    color: $primaryColor;
+  color: $primaryColor;
 }
 
 .mobileBtnContainer {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media only screen and ( max-width: 680px ) {
-    .settingContainer {
-        display: none;
-    }
+@media only screen and (max-width: 680px) {
+  .settingContainer {
+    display: none;
+  }
 
-    .mobileSettingContainer {
-        display: block;
-    }
-
+  .mobileSettingContainer {
+    display: block;
+  }
 }
