@@ -20,6 +20,7 @@ function Setting({setSettingPopup}) {
             </div>
             <div className='settingBtnContainer'>
               <button className='closeBtn' onClick={() => setSettingPopup(false)}>Close</button>
+              <small style={{color: "red", fontSize: "12px"}}>Setting functions are not available yet.</small>
               <button className='saveBtn'>Save</button>
             </div>
         </div>
